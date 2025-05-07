@@ -1,0 +1,209 @@
+/* Footer Container */
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap;
+    padding: 40px 60px;
+    background-color: #111; /* Dark background */
+    color: #fff; /* White text */
+    height: 600px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.contact {
+    font-weight: bold;
+}
+
+.email, .phone {
+    font-size: small;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.church-branch {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+/* Left, Center, Right Sections */
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1; /* Equal space */
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;
+    height: 100%; /* Ensures full height usage */
+    gap: 20px;
+}
+
+
+.footer-center {
+    align-items: center;
+    text-align: center;
+}
+
+
+
+/* Left Section */
+.footer-left {
+    align-items: flex-start; 
+    text-align: left;
+}
+
+/* Right Section */
+.footer-right {
+    align-items: flex-end; 
+    text-align: right;
+}
+
+/* Social Icons */
+.footer-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto; /* Allow flexible height on smaller screens */
+    }
+    
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.footer-center p {
+    max-width: 25ch; /* Limits text width to around 30 characters */
+    word-wrap: break-word;
+    line-height: 1.8;
+    text-align: start;
+}
+
+
+
+.footer-icon {
+    font-size: 30px;
+    color:  red;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icon:hover {
+    transform: scale(1.2);
+    color: rgb(123, 6, 6);
+}
+
+
+/* Subscribe Button */
+.footer-right button {
+    padding: 10px 20px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.footer-right button:hover {
+    background-color: rgb(131, 10, 10);
+    color: white;
+}
+
+/* Footer Text */
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-center p {
+        text-align: center;
+    }
+}
+
+.email-input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.email-button {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 435px) {
+    .footer-container {
+        width: 430px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;     
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+    
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-left h3 {
+        display: none;
+    }
+
+    .footer-right h3 {
+        margin-top: 20px;
+    }
+
+    .email-button, .email-input {
+        width: 350px;
+    }
+    
+    .footer-center p {
+        text-align: center;
+    }
+}

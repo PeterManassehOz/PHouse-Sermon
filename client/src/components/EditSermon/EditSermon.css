@@ -1,0 +1,121 @@
+.edit-sermon-container {
+    max-width: 600px;
+    margin: 50px auto; /* Centers the component */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content inside */
+    text-align: center;  /* Centers text */
+}
+
+/* Ensures labels and inputs align well */
+label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.edit-input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.edit-input:focus, textarea:focus {
+    outline: none;
+    border-color: lightblue;
+    box-shadow: 0 0 5px lightblue;
+}
+
+p {
+    font-weight: bold;
+}
+
+.upload-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .upload-button:hover {
+    background-color: #0056b3;
+  }
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+  
+
+.image-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+
+.preview-image-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: -150px;
+    top: -5px;
+}
+
+.preview-image {
+    position: relative;
+    display: inline-block;
+}
+
+.preview-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.save-button, .cancel-button {
+    width: 100%; /* Makes buttons full width */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.save-button {
+    background-color: red;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #9c9c9e;
+    color: white;
+}
+
+.save-button:hover {
+    background-color: darkred;
+}
+
+.cancel-button:hover {
+    background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+    .edit-sermon-container {
+        width: 90%; /* Make it full width on small screens */
+    }
+}

@@ -1,0 +1,88 @@
+  .subscribers-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subscribers-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+ 
+.search-bar {
+    margin-bottom: 1rem;
+  }
+  
+  .subscriber-search-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .subscriber-list-wrapper {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+  }
+  
+
+  .subscriber-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+ 
+  
+.subscriber-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+  }
+  
+  
+  .subscriber-email,
+  .subscriber-date {
+    color: #444;
+    line-height: 1.4;
+  }
+  
+  .status {
+    text-align: center;
+    margin-top: 1rem;
+    color: #555;
+  }
+  
+  .status.error {
+    color: #d9534f;
+  }
+  
+
+  
+/* ----------- Responsive Styles ----------- */
+@media (min-width: 600px) {
+    .subscriber-item {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .subscriber-email,
+    .subscriber-date {
+      font-size: 1rem;
+    }
+  }

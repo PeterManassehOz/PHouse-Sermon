@@ -1,0 +1,157 @@
+/* Container styling */
+.all-sermons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    justify-items: center;
+}
+
+/* Back button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
+
+.back-button:active {
+    transform: scale(0.9);
+}
+
+/* Title */
+.all-sermons-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+/* Individual sermon card */
+.all-sermons-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.all-sermons-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Sermon image */
+.all-sermons-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Sermon title */
+.all-sermons-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Tablet View (Max width 1024px) */
+@media (max-width: 1024px) {
+    .all-sermons-title {
+        font-size: 1.8rem;
+    }
+
+    .back-button {
+        font-size: 1.4rem;
+        left: 15px;
+        top: 15px;
+    }
+
+    
+    .all-sermons-card {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .all-sermons {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        max-width: 95%;
+    }
+}
+
+/* Mobile View (Max width 768px) */
+@media (max-width: 768px) {
+    .all-sermons-title {
+        font-size: 1.5rem;
+        margin-top: 40px;
+    }
+
+    .all-sermons-card {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .back-button {
+        font-size: 1.2rem;
+        left: 10px;
+        top: 10px;
+    }
+
+    .all-sermons {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .all-sermons-card img {
+        height: 180px;
+    }
+}
+
+/* Small Mobile View (Max width 480px) */
+@media (max-width: 480px) {
+    .all-sermons {
+        grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+        gap: 8px;
+        max-width: 100%;
+        margin-bottom: 200px;
+    }
+
+    .all-sermons-card {
+        padding: 10px;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .all-sermons-title {
+        font-size: 1.3rem;
+        margin-top: 30px;
+    }
+
+    .back-button {
+        font-size: 1rem;
+        left: 8px;
+        top: 8px;
+    }
+
+    .all-sermons-card img {
+        height: 150px;
+    }
+
+    .all-sermons-card h3 {
+        font-size: 1rem;
+    }
+}

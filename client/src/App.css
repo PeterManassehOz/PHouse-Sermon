@@ -1,0 +1,32 @@
+.hero-background {
+  background-image: url('./assets/bwworship.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 800px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+::-webkit-scrollbar {
+  display: none; 
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
+@media (max-width: 480px) {
+  .hero-background {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+}

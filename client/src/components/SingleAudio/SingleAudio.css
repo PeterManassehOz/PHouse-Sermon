@@ -1,0 +1,408 @@
+/* Main Sermon Container */
+.audio-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Back button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: black;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.back-button:hover {
+  color: rgb(67, 58, 58);
+  transform: scale(1.1);
+}
+
+/* Title Styling */
+.audio-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Sermon Image Styling */
+.audio-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Category Text */
+.audio-category {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Audio Player */
+.audio-player {
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.audio-preacher {
+  color: black;
+  margin-top: 10px;
+}
+
+.sermon-body {
+  margin: 0 60px;
+}
+
+
+/* Like, Download, and Comment Buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.action-buttons button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+.action-buttons button:hover {
+  background: #0056b3;
+}
+
+.view-count {
+  font-size: 14px;
+  color: white;
+  background: gray;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.like-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: white;
+  background: gray;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.download-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30px;
+  gap: 10px;
+  color: gray;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.comment-input-container {
+  position: relative; /* Make it the reference for absolute positioning */
+  display: flex;
+  align-items: center;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 10px;
+  height: 200px;
+  border: 1px solid rgb(82, 13, 13);
+  border-radius: 10px;
+  outline: none;
+  resize: none; /* Prevent textarea from being resized */
+}
+
+
+/* Position the send icon inside the textarea */
+.comment-button {
+  position: absolute;
+  bottom: 30px; /* Adjust distance from bottom */
+  right: 50px; /* Adjust distance from right */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0A0A4A;
+  border-radius: 50%;
+  width: 50px; /* Adjust width */
+  height: 50px; /* Adjust height */
+  cursor: pointer;
+}
+
+
+/* Comment Section */
+.comment-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.comment-section textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  height: 200px;
+  border: 1px solid rgb(48, 48, 48);
+  border-radius: 10px;
+  outline: none;
+}
+
+.send-icon {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  background-color: #0A0A4A;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+/* Individual Comment */
+.comment {
+  color: #333;
+  padding: 10px 30px; /* Reduce padding for a tighter layout */
+  border-bottom: 1px solid #ccc; /* Only bottom border for separation */
+  display: flex;
+  margin-right: 20px;
+  justify-content: space-between;
+  align-items: flex-end; /* Align text at the bottom */
+  height: 100px;
+}
+
+/* Ensure text sits at the bottom */
+.comment-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  align-self: flex-end;
+}
+
+.comment-username {
+  font-weight: 700;
+  font-size: large;
+  color: black;
+}
+
+.comment-content {
+  font-weight: 500;
+  color: #555;
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+}
+
+.comment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Delete button styling */
+.comment button {
+  background: red;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.comment button:hover {
+  background: #c82333;
+}
+
+.comment-section {
+  margin-bottom: 50px; /* Creates space below the last comment */
+}
+
+
+.commenter-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  align-items: end;
+}
+
+
+.comment-time {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 12px;
+  color: gray;
+}
+
+@media (max-width: 768px) {
+  .audio-container {
+    margin-top: 60px; /* Add space from top */
+  }
+
+  .back-button {
+    margin-bottom: 30px; /* Space below back button */
+  }
+  
+  .comment-content {
+    gap: 15px;
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  .comment-time {
+    position: absolute;
+    top: 5px;
+  }
+}
+
+
+@media (max-width: 480px) {
+ .back-button {
+  margin-top: unset;
+ }
+
+ .back-button svg {
+  width: 25px; /* Adjust icon width */
+  height: 25px; /* Adjust icon height */
+ }
+
+ .audio-container {
+  width: 90%;
+  text-align: center; /* Align text to the left */
+  padding: 15px;
+}
+
+.audio-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.audio-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.audio-category,
+.audio-preacher {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.sermon-body {
+  margin: 0; /* Remove side margins */
+  padding: 0;
+}
+
+.comment-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.comment-input-container textarea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+}
+
+.comment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  width: 90%;
+}
+
+.comment-button {
+  position: absolute;
+  bottom: 20px; /* Adjust distance from bottom */
+  right: 20px; /* Adjust distance from right */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0A0A4A;
+  border-radius: 50%;
+  width: 50px; /* Adjust width */
+  height: 50px; /* Adjust height */
+  cursor: pointer;
+}
+
+
+.comment-section h3 {
+  font-size: 15px;
+}
+
+.comment {
+  gap: 15px;
+  position: relative;
+  width: 430px;
+  margin-right: unset;
+}
+
+.comment-content {
+  gap: 15px;
+  position: relative;
+  width: 100%;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.comment-time {
+  position: absolute;
+  top: 5px;
+}
+}

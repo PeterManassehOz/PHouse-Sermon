@@ -1,0 +1,152 @@
+.profile-left {
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff; 
+    padding: 20px;
+}
+
+.profile-details {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    height: 740px;
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.home-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;  /* Make the icon slightly bigger */
+    cursor: pointer;
+    background: none; /* Remove default button styles */
+    border: none;
+    color: black; /* Default color */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.home-icon:hover {
+    color: red; /* Change color on hover */
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;    
+    object-fit: cover;
+    object-position: top; 
+    border: 3px solid red;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.name-church {
+    font-weight: bold;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.branch {
+    color: #888;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: red;
+    color: white;
+}
+
+.menu-item:hover .menu-icon,
+.menu-item:hover button {
+    color: white;
+}
+
+.menu-item button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    flex: 1; /* Ensures button takes up remaining space */
+}
+
+.menu-icon {
+    font-size: 20px;
+    color: inherit;
+}
+
+
+/* Ensure proper centering on small screens */
+@media (max-width: 1024px) {
+    .profile-left {
+        height: auto; /* Adjust height automatically */
+        padding: 20px;
+        width: 100%; /* Full width */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-details {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 400px; /* Prevent it from becoming too wide */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-details {
+        width: 350px;
+        margin: 0px;
+    }
+
+    .profile-left {
+        padding: 0px;
+        margin-left: 15px;
+        margin-top: 80px;
+    }
+}

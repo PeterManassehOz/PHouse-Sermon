@@ -1,0 +1,292 @@
+.profile-right {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-form {
+    padding: 10px 30px;
+    height: 800px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+    .profile-form {
+        width: 1000px;
+        padding: 10px 20px;
+    }
+
+    .back-button {
+        display: none;
+    }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 768px) {
+    .profile-form {
+        width: 550px;
+        height: 700px;
+        padding: 15px;
+        justify-content: center;
+    }
+
+    .profile-name,
+    .profile-phone,
+    .profile-state {
+        display: flex;
+        flex-direction: row;
+    }
+
+        
+    .profile-phcode,
+    .profile-church,
+    .profile-address {
+        display: flex;
+        flex-direction: column;
+    }
+
+   .profile-name p,
+   .profile-phone p,
+   .profile-state p {
+    display: none;
+   }
+
+   .profile-phcode p,
+   .profile-church p,
+   .profile-address p {
+    display: none;
+   }
+
+    .profile-input {
+        border-radius: 5px;
+        height: 50px;
+    }
+
+    .profile-button {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .back-button {
+        margin-left: 5px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .back-button svg {
+        width: 15px; /* Adjust icon width */
+        height: 15px; /* Adjust icon height */
+    }
+    
+
+    .profile-title {
+        display: none;
+    }
+
+    .profile-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align to the top */
+        justify-content: flex-start; /* No extra spacing at the bottom */
+        width: 100%;
+        height: 100vh; /* Make it take full screen height */
+        padding: 0; /* Remove unnecessary padding */
+        overflow: hidden; /* Prevent scrolling */
+        margin-left: 20px;
+    }
+
+    .profile-form {
+        width: 100%;
+        max-width: 400px; /* Maintain responsiveness */
+        height: auto; /* Let content define height */
+        padding: 20px;
+        margin-top: 80px; /* Remove any margin at the top */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-name input,
+    .profile-phone input,
+    .profile-state input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .profile-phcode,
+   .profile-church,
+   .profile-address {
+    width: 100%;
+   } 
+ }
+
+.profile-name,
+.profile-phone,
+.profile-state {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.profile-name div,
+.profile-phone div,
+.profile-state div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile-name input,
+.profile-phone input,
+.profile-state input {
+    flex: 1;
+    margin-top: 5px;
+    background-color: #f2f2f2; 
+    color: black; 
+    padding: 15px 10px; 
+    border: none; 
+    border-radius: 10px; 
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
+.profile-name input:focus,
+.profile-phone input:focus,
+.profile-state input:focus {
+    outline: none; 
+    box-shadow: none; 
+}
+
+.profile-phcode,
+.profile-church,
+.profile-address {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-phcode input,
+.profile-church input,
+.profile-address input {
+    width: 100%;
+    background-color: #f2f2f2; 
+    color: black; 
+    padding: 15px 10px; 
+    border: none; 
+    border-radius: 10px; 
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.profile-phcode input:focus,
+.profile-church input:focus,
+.profile-address input:focus {
+    outline: none; 
+    box-shadow: none;
+}
+
+.profile-button {
+    padding: 15px 12px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease; 
+}
+
+.profile-button:hover {
+    background-color: darkred;
+    transition: background-color 0.3s ease;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+p {
+    color: #888; 
+    margin-bottom: 5px; 
+}
+
+.image-input {
+    display: none;
+}
+
+.image-button {
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #888;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-button:hover {
+    background-color: red;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.image-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .image-preview-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 120px;
+    top: -7px;
+  }
+  
+  .image-preview {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-preview img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 10px;
+  }
+  
+  .cancel-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-icon:hover {
+    color: darkred;
+  }
+  

@@ -1,0 +1,138 @@
+.hero-container {
+  display: flex;
+  justify-content: space-between; /* Align left and right sections */
+  align-items: flex-end; /* Align content to the bottom */
+  height: 100vh; /* Full viewport height */
+  padding: 20px; /* Add padding around the edges */
+  margin: 0 50px 50px 50px; /* Add margin to the left and right */
+  color: white; /* Make text white for readability */
+  position: relative; /* Required for absolute positioning within child elements */
+}
+
+/* Title Styling */
+.hero-title {
+  font-weight: bold;
+  font-size: 4rem;
+  white-space: nowrap; /* Prevent title from breaking */
+}
+
+/* Verse Text */
+.hero-verse {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Button Section */
+.hero-right {
+  display: flex;
+  gap: 40px;
+}
+
+/* Hero Buttons */
+.hero-button {
+  display: flex;
+  padding: 15px 12px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.hero-button:hover {
+  background: darkred;
+  transition: background-color 0.3s ease;
+}
+
+/* Tablet View (Max width 1024px) */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto; /* Adjust height */
+    margin: 0 20px 50px 20px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-verse {
+    font-size: 1.2rem;
+  }
+
+  .hero-right {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile View (Max width 768px) */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 20px;
+    margin: 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    white-space: normal;
+  }
+
+  .hero-verse {
+    font-size: 1rem;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+  }
+
+  .hero-right {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 250px;
+  }
+
+  .hero-button {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile View (Max width 480px) */
+@media (max-width: 435px) {
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-verse {
+    font-size: 0.9rem;
+    max-width: 20ch; /* Limits text width to around 30 characters */
+    word-wrap: break-word;
+  }
+
+  .hero-right {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}

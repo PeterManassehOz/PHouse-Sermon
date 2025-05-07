@@ -1,0 +1,231 @@
+.body-container {
+  width: 100%;
+  padding: 0;
+  margin: 0 50px;
+  box-sizing: border-box;
+}
+
+/* Title Styling */
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+  text-align: left;
+}
+
+/* Category Cards Section */
+.category-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Individual Category Card */
+.category-card {
+  flex: 1;
+  max-width: 400px; /* Keeps consistent size */
+  min-width: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 350px;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image Styling */
+.category-card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Category Title */
+.category-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Sermons in a Category */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Adjust for single card */
+.cards-container:has(.card:only-child) {
+  justify-content: center;
+  width: auto;
+}
+
+/* Individual Sermon Card */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 400px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Back Button 
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.back-button svg {
+  font-size: 24px;
+}
+*/
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .category-cards-container {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    align-items: center;
+  }
+
+  /* Ensure two category cards per row */
+  .category-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Two equal-width columns */
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px; /* Prevents stretching */
+    margin: 0 auto; /* Centers the grid */
+  }
+
+  .category-card {
+    width: 100%; /* Ensures they fit within the grid */
+    max-width: none;
+    height: auto;
+  }
+
+  .category-card-image {
+    height: 220px;
+  }
+/*
+  .card {
+    width: 90%;
+  }*/
+}
+
+@media (max-width: 435px) {
+  .body-container {
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto; /* Ensures centering */
+  }
+  
+  
+  /* Title Styling */
+  .title {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Adjust category cards for small screens */
+  .category-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Prevent it from stretching */
+    margin: 0 auto; /* Center the grid */
+  }
+  
+
+  .category-card {
+    min-width: unset; /* Override the min-width from the larger screens */
+    width: 100%; /* Set the new smaller width */
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .category-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Reduce image height */
+  .category-card-image {
+    width: 100%;
+    height: 120px; /* Reduce image height accordingly */
+  }
+  
+  /* Adjust category title */
+  .category-card-title {
+    font-size: 10px;
+    width: 100%; /* Ensure the title fits */
+  }
+}
+
+  
+/* Make sure cards fit on even smaller screens */
+@media (max-width: 360px) {
+  .category-cards-container {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+
+  .category-card {
+    max-width: 100%; /* Take full width */
+  }
+}

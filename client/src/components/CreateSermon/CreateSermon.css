@@ -1,0 +1,164 @@
+/* Container styling */
+.sermon-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Heading */
+.sermon-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Form styling */
+.sermon-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  white-space: pre-line;
+}
+
+/* Input fields */
+.sermon-form input,
+.sermon-form textarea {
+  width: 1000px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Input focus styling */
+.sermon-form input:focus,
+.sermon-form textarea:focus {
+  outline: none;
+  border-color: lightblue;
+  box-shadow: 0 0 5px lightblue;
+}
+
+
+/* Textarea */
+.sermon-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.sermon-description {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-left: 4px solid #007bff;
+  font-size: 16px;
+  white-space: pre-line; /* PRESERVES LINE BREAKS */
+  color: #333;
+}
+
+
+/* File upload */
+.sermon-form input[type="file"] {
+  border: none;
+  background: #f9f9f9;
+  padding: 10px;
+}
+
+/* Button */
+.sermon-form button {
+  padding: 20px 15px;
+  background: red;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sermon-form button:hover {
+  background: darkred;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .sermon-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .sermon-form input,
+  .sermon-form textarea {
+    font-size: 14px;
+  }
+
+  .sermon-form button {
+    font-size: 14px;
+  }
+}
+
+/* Hide default file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Custom file upload button */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(137, 137, 137);
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.custom-file-upload:hover {
+  background-color: #494949;
+}
+
+/* Active effect */
+.custom-file-upload:active {
+  transform: scale(0.95);
+}
+
+/* File name display */
+.file-name {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .custom-file-upload {
+    font-size: 12px;
+  }
+
+  .sermon-form {
+    width: 500px;
+  }
+
+  .sermon-form input, .sermon-form textarea {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .sermon-container {
+    width: 100%;
+  }
+
+  .sermon-form {
+    width: 100%;
+  }
+}

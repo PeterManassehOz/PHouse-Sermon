@@ -1,0 +1,30 @@
+.home-container {
+    display: grid;
+    grid-template-rows: 2fr 1fr; 
+    height: 100vh;
+  }
+  
+  .body-section,
+  .recommended-section,
+  .footer-section {
+    display: flex; 
+  }
+  
+  .hero-section {
+    background-color: #f5f5f5; 
+  }
+  
+  .body-section,
+  .recommended-section {
+    background-color: #ffffff;
+  }
+  
+  .footer-section {
+    background-color: #ffffff;
+  }
+  
+  @media (max-width: 435px) {
+    .body-section {
+      width: 430px;
+    }
+  }
