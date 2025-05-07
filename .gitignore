@@ -17,3 +17,7 @@ yarn-error.log*
 # system
 .DS_Store
 Thumbs.db
+
+# uploads folders
+/server/src/uploads/  
+/server/uploads/       

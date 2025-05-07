@@ -4,7 +4,7 @@ import "./CreateSermon.css"; // Importing CSS file
 import { toast } from 'react-toastify';
 
 const CreateSermon = () => {
-  const [createSermon] = useCreateSermonMutation();
+  const [createSermon, { isLoading }] = useCreateSermonMutation();
   const [sermonData, setSermonData] = useState({
     title: "",
     preacher: "",
@@ -93,7 +93,7 @@ const CreateSermon = () => {
         </label>
         {image && <p className="file-name">Image: {image.name}</p>} {/* Show image file name */}
 
-        <button type="submit">Create Sermon</button>
+        <button type="submit">{isLoading ? "Creating..." : "Create Sermon"}</button>
       </form>
 
       {/* Display the sermon description properly formatted 

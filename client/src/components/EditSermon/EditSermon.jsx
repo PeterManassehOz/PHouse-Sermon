@@ -20,7 +20,7 @@ const EditSermon = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { data: sermon, isLoading, refetch } = useGetSermonByIdQuery(id);
-  const [updateSermon] = useUpdateSermonMutation();
+  const [updateSermon, { isLoading: isUpdating }] = useUpdateSermonMutation();
 
   const [image, setImage] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
@@ -138,7 +138,7 @@ const EditSermon = () => {
         )}
       </div>
 
-      <button className="save-button" type="submit">Save</button>
+      <button className="save-button" type="submit">{isUpdating ? 'Updating...' : 'Save'}</button>
       <button className="cancel-button" type="button" onClick={() => navigate('/admin-dashboard')}>Cancel</button>
     </form>
   );
